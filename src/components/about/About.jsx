@@ -5,6 +5,7 @@ import {FiUsers} from 'react-icons/fi'
 import {VscFolderLibrary} from 'react-icons/vsc'
 
 const About = () => {
+  console.log(ME);
   return (
     <section id='about'>
       <h5>Get To Know</h5>
@@ -12,7 +13,7 @@ const About = () => {
       <div className="container about_container">
         <div className="about_me">
           <div className="about_me-image">
-            <img src={ME} alt="About Image" />
+            <img src={ME} alt="" />
           </div>
         </div>
 
