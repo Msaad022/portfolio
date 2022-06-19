@@ -1,12 +1,32 @@
 import React from 'react'
 import './portfolio.css'
 import IMG1 from '../../assets/todoApp.png'
-import IMG2 from '../../assets/portfolio2.jpg'
-import IMG3 from '../../assets/portfolio3.jpg'
-import IMG4 from '../../assets/portfolio4.jpg'
-import IMG5 from '../../assets/portfolio5.png'
-import IMG6 from '../../assets/portfolio6.jpg'
+import IMG2 from '../../assets/mega.png'
+import IMG3 from '../../assets/shopping.png'
 
+const tasks = [
+  {
+    id: 1,
+    image: IMG1,
+    title: 'You can create / update / delete a list/sublist And I used local storage to save the lists offline and restore it anytime',
+    github: 'https://github.com/Msaad022/todoApp',
+    livedemo: 'https://todo-list-eight-black.vercel.app/' 
+  },
+  {
+    id: 2,
+    image: IMG2,
+    title: 'Mega is an application that I tried to show my skills in,I applied some concepts like responsive web design , browser prefixes and so on.',
+    github: 'https://github.com/Msaad022/mega',
+    livedemo: 'https://mega-two.vercel.app/'
+  },
+  {
+    id: 3,
+    image: IMG3,
+    title: 'Shopping is an e-commerce site that simulates global websites to view and buy products using real money',
+    github: 'https://github.com/Msaad022/shopping_sanity',
+    livedemo: 'https://shopping-sanity.vercel.app/'
+  }
+  ]
 const Portfolio = () => {
   return (
     <section id='portfolio'>
@@ -14,71 +34,20 @@ const Portfolio = () => {
       <h2>Portfolio</h2>
 
       <div className="container portfolio_container">
-        <article className="portfolio_item">
-          <div className="portfolio_item-image">
-            <img src={IMG1} alt="" />
-          </div>
-          <h3>Tasks and time management app</h3>
-          <div className="portfolio_item-cta">
-            <a href="https://github.com/Msaad022/todo-app" className='btn' target='_blank'>Github</a>
-            <a href="https://msaad022.github.io/todo-app/" className='btn btn-primary' target='_blank'>Live Demo</a>
-          </div>
-        </article>
-
-        <article className="portfolio_item">
-          <div className="portfolio_item-image">
-            <img src={IMG2} alt="" />
-          </div>
-          <h3>قريباً إن شاء الله</h3>
-          <div className="portfolio_item-cta">
-            <a href="#portfolio" className='btn'>Github</a>
-            <a href="#portfolio" className='btn btn-primary'>Live Demo</a>
-          </div>
-        </article>
-
-        <article className="portfolio_item">
-          <div className="portfolio_item-image">
-            <img src={IMG3} alt="" />
-          </div>
-          <h3>قريباً إن شاء الله</h3>
-          <div className="portfolio_item-cta">
-            <a href="#portfolio" className='btn'>Github</a>
-            <a href="#portfolio" className='btn btn-primary'>Live Demo</a>
-          </div>
-        </article>
-
-        <article className="portfolio_item">
-          <div className="portfolio_item-image">
-            <img src={IMG4} alt="" />
-          </div>
-          <h3>قريباً إن شاء الله</h3>
-          <div className="portfolio_item-cta">
-            <a href="#portfolio" className='btn'>Github</a>
-            <a href="#portfolio" className='btn btn-primary'>Live Demo</a>
-          </div>
-        </article>
-
-        <article className="portfolio_item">
-          <div className="portfolio_item-image">
-            <img src={IMG5} alt="" />
-          </div>
-          <h3>قريباً إن شاء الله</h3>
-          <div className="portfolio_item-cta">
-            <a href="#portfolio" className='btn'>Github</a>
-            <a href="#portfolio" className='btn btn-primary'>Live Demo</a>
-          </div>
-        </article>
-
-        <article className="portfolio_item">
-          <div className="portfolio_item-image">
-            <img src={IMG6} alt="" />
-          </div>
-          <h3>قريباً إن شاء الله</h3>
-          <div className="portfolio_item-cta">
-            <a href="#portfolio" className='btn'>Github</a>
-            <a href="#portfolio" className='btn btn-primary'>Live Demo</a>
-          </div>
-        </article>
+        {
+          tasks.map(({id, image, title, github, livedemo }) => (
+            <article key={id} className="portfolio_item">
+              <div className="portfolio_item-image">
+                <img src={image} alt="" />
+              </div>
+              <h3>{title}</h3>
+              <div className="portfolio_item-cta">
+                <a href={github} className='btn' target='_blank'>Github</a>
+                <a href={livedemo} className='btn btn-primary' target='_blank'>Live Demo</a>
+              </div>
+            </article>
+          ))
+        }
       </div>
     </section>
   )

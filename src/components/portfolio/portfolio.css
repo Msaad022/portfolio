@@ -19,11 +19,13 @@
   overflow: hidden;
 }
 .portfolio_item-image img {
-  min-height: 220px;
+  height: 250px;
 }
 .portfolio_item h3 {
   margin: 1.2rem 0 2rem;
-  min-height: 64px;
+  height: 160px;
+  word-break: break-word;
+  overflow: hidden;
 }
 .portfolio_item-cta {
   display: flex;
