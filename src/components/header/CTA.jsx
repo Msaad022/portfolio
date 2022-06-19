@@ -1,4 +1,4 @@
-import CV from '../../assets/mohamed_saadCV.pdf'
+import CV from '../../assets/mohamed_saad-CV.pdf'
 
 const CTA = () => {
   return (
