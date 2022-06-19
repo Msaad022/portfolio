@@ -1,4 +1,3 @@
-import React from 'react'
 import './portfolio.css'
 import IMG1 from '../../assets/todoApp.png'
 import IMG2 from '../../assets/mega.png'
