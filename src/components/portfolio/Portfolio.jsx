@@ -2,6 +2,7 @@ import './portfolio.css'
 import IMG1 from '../../assets/todoApp.png'
 import IMG2 from '../../assets/mega.png'
 import IMG3 from '../../assets/shopping.png'
+import IMG4 from '../../assets/us_them.png'
 
 const tasks = [
   {
@@ -24,6 +25,13 @@ const tasks = [
     title: 'Shopping is an e-commerce site that simulates global websites to view and buy products using real money',
     github: 'https://github.com/Msaad022/shopping_sanity',
     livedemo: 'https://shopping-sanity.vercel.app/'
+  },
+  {
+    id: 4,
+    image: IMG4,
+    title: 'The We and They application aims to reach the best free treatment for children with special needs...',
+    github: 'https://github.com/Msaad022/us-them',
+    livedemo: 'https://us-them.vercel.app/'
   }
   ]
 const Portfolio = () => {
